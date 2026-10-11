@@ -921,10 +921,12 @@ languages:
   zh:
     - zh_qwerty
     - zh_zhuyin
+    - zh_zhuyin_ortholinear
     - zh_stroke
   zh_Hant:
     - zh_qwerty
     - zh_zhuyin
+    - zh_zhuyin_ortholinear
     - zh_stroke
   zu:
     - qwerty

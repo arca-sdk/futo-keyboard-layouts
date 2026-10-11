@@ -1,11 +1,17 @@
-name: 注音 (Zhuyin)
+name: 注音 (Zhuyin, staggered)
 languages: zh
-description: Zhuyin (Bopomofo) in the Dachen (大千) arrangement used in Taiwan. Tones are optional.
+description: Zhuyin (Bopomofo) in the Dachen (大千) arrangement used in Taiwan, with staggered rows like a PC keyboard. Tones are optional.
 attributes: {moreKeyMode: OnlyExplicit}
 autoShift: false
 imeHint: "zhuyin"
+overrideWidths:
+  # 11 keys per row, set explicitly as the gaps would otherwise count as keys
+  Regular: 0.090909
+  # A third and two thirds of a key, to stagger the middle rows
+  Custom1: 0.030303
+  Custom2: 0.060606
 rows:
-  # Long-press numbers match the Dachen keys on a PC keyboard
+  # Long-press gives the Dachen key's character on a PC keyboard, or punctuation
   - letters:
     - ['ㄅ', '1']
     - ['ㄉ', '2']
@@ -18,9 +24,44 @@ rows:
     - ['ㄞ', '9']
     - ['ㄢ', '0']
     - ['ㄦ', '-']
-  - letters: ㄆ ㄊ ㄍ ㄐ ㄔ ㄗ ㄧ ㄛ ㄟ ㄣ
-  - letters: ㄇ ㄋ ㄎ ㄑ ㄕ ㄘ ㄨ ㄜ ㄠ ㄤ
-  - letters: ㄈ ㄌ ㄏ ㄒ ㄖ ㄙ ㄩ ㄝ ㄡ ㄥ $delete
+  - letters:
+    - {type: gap, attributes: {width: Custom1}}
+    - ['ㄆ', 'q']
+    - ['ㄊ', 'w']
+    - ['ㄍ', 'e']
+    - ['ㄐ', 'r']
+    - ['ㄔ', 't']
+    - ['ㄗ', 'y']
+    - ['ㄧ', 'u']
+    - ['ㄛ', 'i']
+    - ['ㄟ', 'o']
+    - ['ㄣ', 'p']
+    - {type: gap, attributes: {width: Custom2}}
+  - letters:
+    - {type: gap, attributes: {width: Custom2}}
+    - ['ㄇ', 'a']
+    - ['ㄋ', 's']
+    - ['ㄎ', 'd']
+    - ['ㄑ', 'f']
+    - ['ㄕ', 'g']
+    - ['ㄘ', 'h']
+    - ['ㄨ', 'j']
+    - ['ㄜ', 'k']
+    - ['ㄠ', 'l']
+    - ['ㄤ', '：']
+    - {type: gap, attributes: {width: Custom1}}
+  - letters:
+    - ['ㄈ', 'z']
+    - ['ㄌ', 'x']
+    - ['ㄏ', 'c']
+    - ['ㄒ', 'v']
+    - ['ㄖ', 'b']
+    - ['ㄙ', 'n']
+    - ['ㄩ', 'm']
+    - ['ㄝ', '…|……']
+    - ['ㄡ', '！']
+    - ['ㄥ', '？']
+    - {type: delete, attributes: {width: Regular}}
   - bottom:
     - $symbols
     - type: base

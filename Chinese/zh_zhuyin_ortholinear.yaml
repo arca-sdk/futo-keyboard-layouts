@@ -1,0 +1,65 @@
+name: 注音 (Zhuyin, ortholinear)
+languages: zh
+description: Zhuyin (Bopomofo) in the Dachen (大千) arrangement used in Taiwan, in a 10-column grid. Tones are optional.
+attributes: {moreKeyMode: OnlyExplicit}
+autoShift: false
+imeHint: "zhuyin"
+rows:
+  # Long-press gives the Dachen key's character on a PC keyboard, or punctuation
+  - letters:
+    - ['ㄅ', '1']
+    - ['ㄉ', '2']
+    - ['ˇ', '3', 'ˉ']
+    - ['ˋ', '4']
+    - ['ㄓ', '5']
+    - ['ˊ', '6']
+    - ['˙', '7']
+    - ['ㄚ', '8']
+    - ['ㄞ', '9']
+    - ['ㄢ', '0']
+  - letters:
+    - ['ㄆ', 'q']
+    - ['ㄊ', 'w']
+    - ['ㄍ', 'e']
+    - ['ㄐ', 'r']
+    - ['ㄔ', 't']
+    - ['ㄗ', 'y']
+    - ['ㄧ', 'u']
+    - ['ㄛ', 'i']
+    - ['ㄟ', 'o']
+    - ['ㄣ', 'p']
+  - letters:
+    - ['ㄇ', 'a']
+    - ['ㄋ', 's']
+    - ['ㄎ', 'd']
+    - ['ㄑ', 'f']
+    - ['ㄕ', 'g']
+    - ['ㄘ', 'h']
+    - ['ㄨ', 'j']
+    - ['ㄜ', 'k']
+    - ['ㄠ', 'l']
+    - ['ㄤ', '：']
+  - letters:
+    - ['ㄈ', 'z']
+    - ['ㄌ', 'x']
+    - ['ㄏ', 'c']
+    - ['ㄒ', 'v']
+    - ['ㄖ', 'b']
+    - ['ㄙ', 'n']
+    - ['ㄩ', 'm']
+    - ['ㄝ', '…|……']
+    - ['ㄡ', '！']
+    - ['ㄥ', '？']
+  - bottom:
+    - $symbols
+    - type: base
+      spec: '，'
+      moreKeys: ['。', '、', '；', '：', '？', '！', '「', '」']
+      attributes: { moreKeyMode: OnlyExplicit }
+    - $action
+    - $space
+    - type: base
+      spec: 'ㄦ'
+      attributes: { style: Normal }
+    - {type: delete, attributes: {width: Regular}}
+    - $enter
