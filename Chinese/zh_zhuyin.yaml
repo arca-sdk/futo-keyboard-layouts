@@ -1,0 +1,36 @@
+name: 注音 (Zhuyin)
+languages: zh
+description: Zhuyin (Bopomofo) in the Dachen (大千) arrangement used in Taiwan. Tones are optional.
+attributes: {moreKeyMode: OnlyExplicit}
+autoShift: false
+imeHint: "zhuyin"
+rows:
+  # Long-press numbers match the Dachen keys on a PC keyboard
+  - letters:
+    - ['ㄅ', '1']
+    - ['ㄉ', '2']
+    - ['ˇ', '3', 'ˉ']
+    - ['ˋ', '4']
+    - ['ㄓ', '5']
+    - ['ˊ', '6']
+    - ['˙', '7']
+    - ['ㄚ', '8']
+    - ['ㄞ', '9']
+    - ['ㄢ', '0']
+    - ['ㄦ', '-']
+  - letters: ㄆ ㄊ ㄍ ㄐ ㄔ ㄗ ㄧ ㄛ ㄟ ㄣ
+  - letters: ㄇ ㄋ ㄎ ㄑ ㄕ ㄘ ㄨ ㄜ ㄠ ㄤ
+  - letters: ㄈ ㄌ ㄏ ㄒ ㄖ ㄙ ㄩ ㄝ ㄡ ㄥ $delete
+  - bottom:
+    - $symbols
+    - type: base
+      spec: '，'
+      moreKeys: ['、', '；', '：', '「', '」']
+      attributes: { moreKeyMode: OnlyExplicit }
+    - $action
+    - $space
+    - type: base
+      spec: '。'
+      moreKeys: ['？', '！', '…|……', '—|——', '『', '』']
+      attributes: { moreKeyMode: OnlyExplicit }
+    - $enter

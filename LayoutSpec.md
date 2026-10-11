@@ -418,7 +418,7 @@ The `Keyboard` data class represents a keyboard layout definition, serving as th
 
 Valid values for Japanese are "12key" or "qwerty" to specify how the keys should be interpreted.
 
-Valid values for Chinese are "stroke" or "qwerty" to specify which schema should be used.
+Valid values for Chinese are "stroke", "zhuyin" or "qwerty" to specify which schema should be used. Unlike stroke, zhuyin layouts type the Bopomofo symbols themselves (e.g. "ㄅ", "ˊ"), which the engine remaps internally.
 
 When the imeHint is not qwerty, the key codes are remapped to something else. For example, "1" will type "あ" in 12key Japanese, and "a" will type "き", despite no phonetic relation between these letters. Whereas in Chinese, "h" types "一" in stroke input. You will need to heavily reference these layouts if you want to use a non-qwerty imeHint:
 * [Chinese stroke](https://github.com/futo-org/futo-keyboard-layouts/blob/main/Chinese/zh_stroke.yaml)
