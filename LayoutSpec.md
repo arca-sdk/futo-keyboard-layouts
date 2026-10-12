@@ -374,6 +374,13 @@ The `Keyboard` data class represents a keyboard layout definition, serving as th
 * **Optional**: Yes
 * **Default Value**: `ClampHeight`
 
+#### `keepStandardRowHeight`
+
+* **Description**: (optional) Whether letter rows beyond the usual three should keep the height of a three-row layout's rows, making the keyboard taller, rather than all rows shrinking to fit.
+* **Type**: `Boolean`
+* **Optional**: Yes
+* **Default Value**: `false`
+
 #### `useZWNJKey`
 
 * **Description**: (optional) Whether or not the ZWNJ key should be shown in place of the contextual key.

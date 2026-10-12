@@ -4,6 +4,8 @@ description: Zhuyin (Bopomofo) in the Dachen (大千) arrangement used in Taiwan
 attributes: {moreKeyMode: OnlyExplicit}
 autoShift: false
 imeHint: "zhuyin"
+# Four letter rows, so grow the keyboard rather than shortening the keys
+keepStandardRowHeight: true
 rows:
   # Long-press gives the Dachen key's character on a PC keyboard, or punctuation
   - letters:
